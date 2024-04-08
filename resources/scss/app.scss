@@ -1,0 +1,120 @@
+@use '/resources/scss/partials/general.scss' as *;
+
+// Import Bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+// Import del file nav.scss
+@import './partials/nav';
+@import './partials/footer';
+
+
+// Stile globale per il body e il main
+body {
+    background-color: #1C1C1C;
+    color: white;
+}
+
+main {
+    position: relative;
+}
+
+// Stile per la sezione container
+.container {
+    position: relative;
+}
+
+// Stile per la sezione current-series
+.current-series {
+    background-color: #0282F9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-25px);
+}
+
+// Stile per il pulsante 
+.more .button {
+    background-color: #0282F9;
+    transition: .2s ease;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+    }
+}
+
+// Stile per le cards
+.cards {
+    width: calc(100% / 6 - 24px / 6 * 5);
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+// Stile per le immagini
+.position{
+    position: relative;
+
+    img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        object-position: top;
+    }
+
+    .description {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        padding: 10px;
+        text-align: right;
+        opacity: 0;
+        transition: .2s ease;
+
+        &:hover {
+            opacity: 1;
+            background-color: rgba(48, 48, 48, 0.636);
+            
+        }
+
+        h4 {
+            font-size: 12px;
+        }
+
+        .span {
+            display: inline-block;
+            background-color: rgba(0, 0, 0, 0.514);
+            padding: 0px 4px;
+        }
+    }
+}
+
+// Stile per l'icon-bar
+.icon-bar {
+    background-color: #0282F9;
+}
+
+// Stile per gli elementi .icon-menu
+.icon-menu {
+    transition: .2s ease;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+
+    img {
+        width: 55px;
+        height: auto;
+
+
+       
+    }
+}
+
+// Stile per gli elementi h3
+h3 {
+    font-size: 12px;
+    text-transform: uppercase;
+}
